@@ -1,0 +1,22 @@
+{
+    "name":"thea",
+    "title":"Thea Edition",
+    "description":"Thea Edition by Nils Gunnar Kjersem",
+    "author": "Nilsoop",
+    "version": 0.01,
+    "minimumCoreVersion": "9",
+    "compatibleCoreVersion": "9",
+    "esmodules": [
+        "thea.js"
+    ],
+    "styles":[
+        "thea.css"
+    ],
+    "packs":[
+
+    ],
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "hit points",
+    "initiative": "1d20 + @dex_Mod + @initiative_Mod"
+}
