@@ -1,4 +1,32 @@
 {
     "Actor":{},
-    "Item":{}
+    "Item":{
+        "types":[
+            "weapon",
+            "armor"
+        ],
+        "templates":{
+            "itemDesc":{
+                "description": ""
+            }
+        },
+        "weapon":{
+            "templates":[
+                "itemDesc"
+            ],
+            "attackMod": "str",
+            "damageDice": 0,
+            "damageMod": "str",
+            "addtionalDamage": 0
+        },
+        "armor": {
+            "templates":[
+                "itemDesc"
+            ],
+            "baseAC": 10,
+            "acMod": "dex",
+            "strRec": "none",
+            "stealthDis": false
+        }
+    }
 }

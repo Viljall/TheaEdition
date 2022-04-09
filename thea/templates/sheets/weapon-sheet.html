@@ -1,0 +1,43 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div class="sheet-content">
+        <table>
+            <tr>
+                <th>{{localize "Attack Modifer"}}</th>
+                <th>{{localize "Damage Dice"}}</th>
+                <th>{{localize "Damage Modifer"}}</th>
+                <th>{{localize "Addtional Damage"}}</th>
+            </tr>
+            <tr class="cell-content">
+                <td>
+                    <select name="data.attackMod">
+                        {{#select data.attackMod}}
+                        {{#each config.attackModTypes as |name type|}}
+                        <option value="{{type}}"> {{localize name}} </option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td> 
+                <td>
+                    <input name="data.damageDice" type="text" value="{{data.damageDice}}" />
+                </td>
+                <td>
+                    <select name="data.damageMod">
+                        {{#select data.damageMod}}
+                        {{#each config.damageModTypes as |name type|}}
+                        <option value="{{type}}"> {{localize name}} </option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="data.addtionalDamage" type="text" value="{{data.addtionalDamage}}" />
+                </td>
+            </tr>
+        </table>                                  
+        {{editor content=data.itemDesc target="data.itemDesc" button=true owner=owner editable=editable}}   
+    </div>
+</form>
